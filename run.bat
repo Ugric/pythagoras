@@ -1,0 +1,1 @@
+./argon-lang/argon.exe pythagoras

@@ -1,0 +1,69 @@
+# functions
+# a sub library of maths
+
+from constants import e
+
+sub factorial(num) [
+    num = whole(num)
+    answer = 1
+    i = 2
+    while i < num+1 [
+        answer = answer * i
+        i = i + 1
+    ]
+    return answer
+]
+
+sub mod(x, n) [
+    return x - n * whole(x / n)
+]
+
+sub abs(x) [
+    if x < 0 [
+        return 0-x
+    ]
+    return x
+]
+
+sub sqrt(x) [
+    last_guess = x/2
+    if x equals 0 [
+        return 0
+    ]
+    i = 0
+    while yes [
+        if i > 10000 [
+            error "sqrt: could not find a solution for the square root of " + x
+        ]
+        guess = (last_guess + x / last_guess) / 2
+        if abs(guess - last_guess) < 1e-5 [
+            return guess
+        ]
+        last_guess = guess
+        i = i + 1
+    ]
+]
+
+sub exp(x) [
+    return (e**x)
+]
+
+sub ln(x) [
+    n = 1e10
+    return n * ((x ** (1/n)) - 1)
+]
+
+sub logarithm(x) [
+    return ln(x)/ln(10)
+]
+
+sub logarithmX(x,base) [
+    return ln(x)/ln(base)
+]
+
+sub alogarithm(x) [
+    return 10**x
+]
+sub alogarithmX(x, base) [
+    return base**x
+]

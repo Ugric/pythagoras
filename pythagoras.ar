@@ -1,0 +1,31 @@
+log(`MENU
+
+  |\\
+ A| \\C
+  |__\\
+    B
+
+1. Solve C (hypotenuse) [√(a² + b²) = c]
+2. Solve A              [a = √(c² - b²)]
+3. Quit`)
+
+while yes [
+    var choice = number(input('\nchoice: '))
+    if choice == 1 [
+        const a = number(input('a: '))
+        const b = number(input('b: '))
+        var c = a*a + b*b
+        c = c**0.5
+        log('c:', c)
+    ] else if choice == 2 [
+        const c = number(input('c: '))
+        const b = number(input('b: '))
+        var a = c*c - b*b
+        a = a**0.5
+        log('a:', a)
+    ] else if choice == 3 [
+        break
+    ] else [
+        log('invalid choice... try again!')
+    ]
+]
