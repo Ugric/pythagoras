@@ -1,0 +1,2 @@
+# pythagoras
+for school project
