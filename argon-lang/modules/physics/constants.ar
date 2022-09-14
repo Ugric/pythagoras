@@ -1,5 +1,0 @@
-# constants
-# a sub library of physics
-
-c =  299792458
-WaterSHC = 4182

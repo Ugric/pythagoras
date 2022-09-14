@@ -1,1 +1,1 @@
-./argon-lang/argon.exe pythagoras
+./argon.exe pythagoras
